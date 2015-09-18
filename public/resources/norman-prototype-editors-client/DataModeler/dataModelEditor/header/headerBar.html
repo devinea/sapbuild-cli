@@ -1,0 +1,90 @@
+<header class="np-e-toolbar" style="min-width:400px;" layout="row" layout-align="space-between center">
+    <div class="np-e-toolbar-left" layout="row" layout-align="start center">
+
+        <button id="np-e-preview-icon" class="np-e-header-button"
+                ui-tooltip-content="Back To Prototype" ui-tooltip-side="top" ui-tooltip ui-tooltip-class="ui-tooltip-white"
+                ng-click="ctrl.goToUIComposer()">BACK
+        </button>
+    </div>
+
+        <div class="np-e-toolbar-right" layout="row" layout-align="start center">
+
+            <div class="dm-header-svg-imag dmsvg-plus-square-icon"
+                 data-toggle="tooltip" ui-popup-open="add-panel"
+                 ui-tooltip ui-tooltip-class="ui-tooltip-white" ui-tooltip-content="Add Objects" ui-tooltip-side="top">
+            </div>
+            <div class="np-e-header-separator"></div>
+
+            <div class="dm-header-ui-zoom">
+                <ui-zoom offset-x="-3" offset-y="10"></ui-zoom>
+            </div>
+
+            <div id="np-e-toggle-nav-icon-2"
+                  class="np-e-header-toggle-nav-icon prototype-assets--images--header--panel-left-icon np-e-header-dimensions"
+                  ui-tooltip-content="Show/Hide Left Panel" ui-tooltip-side="top"
+                  ui-tooltip ui-tooltip-class="ui-tooltip-white"
+                  ng-class="{'prototype-assets--images--header--panel-left-icon-off': ctrl.toggleNavigationBar.toggled, 'prototype-assets--images--header--panel-left-icon' : !ctrl.toggleNavigationBar.toggled}"
+                  ng-click="ctrl.toggleNavigationBar()">
+            </div>
+            <div id="dm-e-toggle-siderbar-right-icon"
+                 class="np-e-header-toggle-sidebar-right-icon prototype-assets--images--header--panel-right-icon np-e-header-dimensions"
+                 ui-tooltip
+                 ui-tooltip-content="Show/Hide Right Panel"
+                 ui-tooltip-side="top"
+                 ui-tooltip-class="ui-tooltip-white"
+                 ng-click="ctrl.toggleShowHideSidePanel()">
+            </div>
+
+            <div id="np-e-undo-icon" ui-tooltip-content="Undo" ui-tooltip-side="top" ui-tooltip
+                  ui-tooltip-class="ui-tooltip-white" class="prototype-assets--images--header--undo-icon-off np-e-header-dimensions"></div>
+            <div id="np-e-redo-icon" ui-tooltip-content="Redo" ui-tooltip-side="top" ui-tooltip
+                  ui-tooltip-class="ui-tooltip-white" class="prototype-assets--images--header--redo-icon-off np-e-header-dimensions"></div>
+
+            <div class="np-e-header-separator"></div>
+
+            <div id="dm-e-create-research-study-icon"
+                  class="np-e-header-icon-active prototype-assets--images--header--research-off np-e-header-dimensions"
+                  ui-tooltip-content="Create Study" ui-tooltip-side="top" ui-tooltip ui-tooltip-class="ui-tooltip-white"></div>
+             <div id="dm-e-publish-icon"
+                   class="np-e-header-icon-active np-e-header-share-icon prototype-assets--images--header--share-icon-off np-e-header-dimensions"
+                   ui-tooltip-content="Publish" ui-tooltip-side="top" ui-tooltip ui-tooltip-class="ui-tooltip-white" ></div>
+            <button id="dm-e--preview-icon" class="np-e-header-button np-e-header-button-off" ui-tooltip-content="Preview" ng-disabled="true"
+                    ui-tooltip-side="top" ui-tooltip ui-tooltip-class="ui-tooltip-white">PREVIEW
+            </button>
+
+        </div>
+
+    <ui-popup placement="bottom" id="add-panel" class="dm-add-panel" offset-x="-10" offset-y="10">
+        <div ui-popup-close>
+            <div class="dm-add-panel-option" ng-click="ctrl.addNewEntity()">
+                <div class="dm-header-icon-wrapper">
+                    <div class="dmsvg-add-icon"></div>
+                </div>
+                <span>Manually </span>
+            </div>
+            <div class="dm-add-panel-option" ng-click="ctrl.openSearch()">
+                <div class="dm-header-icon-wrapper">
+                    <div class="dmsvg-Search-icon"></div>
+                </div>
+                <span>From Search </span>
+            </div>
+            <div class="dm-add-panel-option" id="dm-header-import-excel">
+                <div class="dm-header-icon-wrapper">
+                    <div class="dmsvg-importXLS-icon"></div>
+                </div>
+                <span>From Excel</span>
+            </div>
+        </div>
+        <ui-file-upload is-dialog="false"
+                        dropzone-id="dm-header-import-excel"
+                        upload-button-id="dm-header-import-excel"
+                        success="ctrl.importSuccess(fileId)"
+                        upload-url="{{ctrl.getImportUrl()}}">
+        </ui-file-upload>
+    </ui-popup>
+
+</header>
+
+
+
+

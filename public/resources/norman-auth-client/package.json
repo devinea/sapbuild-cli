@@ -1,0 +1,45 @@
+{
+  "name": "norman-auth-client",
+  "version": "0.3.0",
+  "description": "Express module to handle user authentication",
+  "licenses": [
+    {
+      "type": "Apache License, Version 2.0",
+      "url": "https://github.com/SAP/Build/blob/master/LICENSE.txt"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sapbuild/Auth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sapbuild/Auth/issues"
+  },
+  "homepage": "https://github.com/sapbuild/Auth",
+  "_id": "norman-auth-client@0.3.0",
+  "scripts": {},
+  "_shasum": "00ba8b89f0ba1a84b23f7c5e970e13c8a4fe04ec",
+  "_from": "norman-auth-client@0.3.0",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "davidjones02",
+    "email": "david.jones02@sap.com"
+  },
+  "maintainers": [
+    {
+      "name": "devinea",
+      "email": "austin.devine@sap.com"
+    },
+    {
+      "name": "davidjones02",
+      "email": "david.jones02@sap.com"
+    }
+  ],
+  "dist": {
+    "shasum": "00ba8b89f0ba1a84b23f7c5e970e13c8a4fe04ec",
+    "tarball": "http://registry.npmjs.org/norman-auth-client/-/norman-auth-client-0.3.0.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/norman-auth-client/-/norman-auth-client-0.3.0.tgz",
+  "readme": "ERROR: No README data found!"
+}

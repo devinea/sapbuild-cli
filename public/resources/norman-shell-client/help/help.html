@@ -1,0 +1,14 @@
+<div ng-controller="HelpCtrl as help" class="help-content">
+    <div class="phd-overlay" ng-if="!help.hideFTUOverlay && help.isLandingPage"></div>
+    <div class="phd-wrapper" ng-if="!help.hideFTUOverlay && help.isLandingPage">
+        <div class="phd-content">
+            <ui-video class="header-video" title="{{help.overlayActiveTitle}}" tile-width="100%" title-within="true" src="{{help.overlayActiveVideo}}" allow-play="true"></ui-video>
+            <ui-video-slider ng-if="help.aVideoSliderItems.length > 1" data-items="help.aVideoSliderItems" on-video-clicked="help.sliderVideoSelected(video)" class="slider"></ui-video-slider>
+            <div class="dismiss">
+                <ui-checkbox id="shell-dismissHelp" ng-model="help.disableHelp"></ui-checkbox>
+                <label for="shell-dismissHelp" class="label">Don't show this again.</label>
+            </div>
+            <span class="close" ng-click="help.closeHelpOverlay()">×</span>
+        </div>
+    </div>
+</div>

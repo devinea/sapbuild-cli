@@ -1,0 +1,50 @@
+{
+  "name": "norman-prototype-editors-client",
+  "version": "0.3.0",
+  "description": "Prototype Editors Client",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sapbuild/PrototypeEditors.git"
+  },
+  "licenses": [
+    {
+      "type": "Apache License, Version 2.0",
+      "url": "https://github.com/SAP/Build/blob/master/LICENSE.txt"
+    }
+  ],
+  "dependencies": {
+    "norman-angular-ui-tree": "0.3.0",
+    "norman-keyboard-event-polyfill": "0.3.0",
+    "norman-ng-grid": "0.3.0"
+  },
+  "bugs": {
+    "url": "https://github.com/sapbuild/PrototypeEditors/issues"
+  },
+  "homepage": "https://github.com/sapbuild/PrototypeEditors",
+  "_id": "norman-prototype-editors-client@0.3.0",
+  "scripts": {},
+  "_shasum": "c2bbeb3a52e44673d2d77a5d189b4a65e86453aa",
+  "_from": "norman-prototype-editors-client@0.3.0",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "davidjones02",
+    "email": "david.jones02@sap.com"
+  },
+  "maintainers": [
+    {
+      "name": "devinea",
+      "email": "austin.devine@sap.com"
+    },
+    {
+      "name": "davidjones02",
+      "email": "david.jones02@sap.com"
+    }
+  ],
+  "dist": {
+    "shasum": "c2bbeb3a52e44673d2d77a5d189b4a65e86453aa",
+    "tarball": "http://registry.npmjs.org/norman-prototype-editors-client/-/norman-prototype-editors-client-0.3.0.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/norman-prototype-editors-client/-/norman-prototype-editors-client-0.3.0.tgz",
+  "readme": "ERROR: No README data found!"
+}

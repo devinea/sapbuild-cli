@@ -1,0 +1,22 @@
+{
+    "enable-prototype": {
+        "name": "Prototype service, transform the prototype definition from metadata to actual code.",
+        "enabled": true
+    },
+    "enable-group": {
+        "name": "Group in Data Modeler",
+        "enabled": false
+    },
+    "enable-prototype-generation": {
+        "name": "Automatic prototype generation from data model",
+        "enabled": false
+    },
+    "enable-dataModeler": {
+        "name": "Data Modeler",
+        "enabled": true
+    },
+    "internal-customer": {
+        "name": "Shell Help URL",
+        "enabled": true
+    }
+}

@@ -1,0 +1,4 @@
+<input class="np-e-tree-handle-page-name np-e-tree-handle-page-input-js"
+       ng-class="{'np-e-tree-handle-selected': (item.data._selected && !editing), 'np-e-tree-handle-page-edit': editing}"
+       readOnly="true" type="text" maxlength="60" ng-model="item.displayName" ng-show="item.data.isPageElement()" ng-blur="saveDisplayName()"
+       ng-dblClick="editPageOnTree()">

@@ -1,0 +1,50 @@
+<div layout="column" class="project-settings animated fadeIn" layout-fill>
+    <div layout="row" id="title" ><h1>Project Settings</h1></div>
+
+    <div layout="row">
+        <div layout="column" id="project-settings-selection">
+            <ul>
+                <li class="item" ng-class="{'active': selectedSetting === 'archive'}" ng-click="selectedSetting = 'archive'">Archive Project</li>
+                <li class="item" ng-class="{'active': selectedSetting === 'picture'}" ng-click="selectedSetting = 'picture'">Project Picture</li>
+            </ul>
+        </div>
+
+        <div ng-if="selectedSetting === 'archive'" layout="column">
+            <div layout="row">
+                <h2>{{archiveActionName()}} Project</h2>
+            </div>
+            <div layout="row" class="archive-checkbox-row" ng-class="{disabled:!projectLoaded}">
+                <ui-checkbox id="chb-archive" ng-model="enableArchiveButton" ng-disabled="!projectLoaded"></ui-checkbox>
+                <label for="chb-archive">I want to {{archiveActionName()}} the project</label>
+            </div>
+            <div layout="row">
+                <ui-button class="btn-archive" size="large"
+                           ng-disabled="!enableArchiveButton"
+                           ng-click="archiveProject()">{{archiveActionName()}}</ui-button>
+            </div>
+        </div>
+        <div ng-if="selectedSetting === 'picture'" layout="column" class="upload-image">
+
+            <div id="thumbnail-display" ng-style="isBinaryImage && {'background-image': 'url(data:image/gif;base64,' + projectThumbnail + ')'} || {'background-image': 'url(' + projectThumbnail + ')'}"></div>
+            <ui-button class="button" ui-dialog-open="projectUploadImageDialog">Select Image</ui-button>
+
+            <ui-dialog id="projectUploadImageDialog" modal="true" title="Select An Image" cancel-text="Cancel" close-text="Select" close-action="setProjectImage()"
+                       on-open="loadAssets()">
+                <div class="content">
+                    <div ng-repeat="asset in assets"
+                        class="asset"
+                        ng-class="{selected: asset.selected}"
+                        ng-click="selectAsset($index)">
+
+                        <div class="complete-tick"></div>
+                        <ui-thumbnail dark
+                            thumbnail-src="{{asset.thumbnail}}"
+                            size="medium"
+                            class="asset-thumbnail">
+                        </ui-thumbnail>
+                    </div>
+                </div>
+            </ui-dialog>
+        </div>
+    </div>
+</div>

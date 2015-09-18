@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="12px" height="6px" viewBox="0 0 12 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>show_less_onhover</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Composer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Advanced_Properties_2" sketch:type="MSArtboardGroup" transform="translate(-1489.000000, -343.000000)" stroke="#53CDFF" stroke-width="0.25" fill="#53CDFF">
+            <g id="Path-Copy-+-Path-Copy-2-+-Fill-1-Copy-4" sketch:type="MSLayerGroup" transform="translate(1399.000000, 344.000000)">
+                <path d="M96.3871973,4.51804317 L100.839767,0.783965321 C100.946855,0.694149053 101,0.576851687 101,0.459219186 C101,0.341921821 100.946456,0.22428932 100.839767,0.134473051 C100.625989,-0.0448243504 100.279549,-0.0448243504 100.065772,0.134473051 L96.0003996,3.5441399 L91.934628,0.134473051 C91.7208503,-0.0448243504 91.3744106,-0.0448243504 91.1606329,0.134473051 C90.9464557,0.314105588 90.9464557,0.60466792 91.1606329,0.783965321 L95.6132023,4.51804317 C95.8269799,4.69767571 96.1734196,4.69767571 96.3871973,4.51804317 Z" id="show_less_onhover" sketch:type="MSShapeGroup" transform="translate(96.000000, 2.326384) scale(1, -1) translate(-96.000000, -2.326384) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

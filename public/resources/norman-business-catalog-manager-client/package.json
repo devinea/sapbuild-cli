@@ -1,0 +1,46 @@
+{
+  "name": "norman-business-catalog-manager-client",
+  "version": "0.3.0",
+  "description": "Business Catalog Manager Client",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sapbuild/BusinessCatalogManager.git"
+  },
+  "licenses": [
+    {
+      "type": "Apache License, Version 2.0",
+      "url": "https://github.com/SAP/Build/blob/master/LICENSE.txt"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/sapbuild/BusinessCatalogManager/issues"
+  },
+  "homepage": "https://github.com/sapbuild/BusinessCatalogManager#readme",
+  "_id": "norman-business-catalog-manager-client@0.3.0",
+  "scripts": {},
+  "_shasum": "5684d300d1a275d23a7adb945d0e423b10e0c60f",
+  "_from": "norman-business-catalog-manager-client@0.3.0",
+  "_npmVersion": "2.12.1",
+  "_nodeVersion": "0.10.40",
+  "_npmUser": {
+    "name": "devinea",
+    "email": "austin.devine@sap.com"
+  },
+  "dist": {
+    "shasum": "5684d300d1a275d23a7adb945d0e423b10e0c60f",
+    "tarball": "http://registry.npmjs.org/norman-business-catalog-manager-client/-/norman-business-catalog-manager-client-0.3.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "devinea",
+      "email": "austin.devine@sap.com"
+    },
+    {
+      "name": "davidjones02",
+      "email": "david.jones02@sap.com"
+    }
+  ],
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/norman-business-catalog-manager-client/-/norman-business-catalog-manager-client-0.3.0.tgz",
+  "readme": "ERROR: No README data found!"
+}

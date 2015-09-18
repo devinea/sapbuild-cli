@@ -1,0 +1,91 @@
+<div class="np-e-sidebar np-e-sidebar-js">
+    <ui-tabs class="np-e-sidebar-tabs" selected-tab="tab-uibuilder" tab-on="library.tabOn">
+        <ui-tab-option id="tab-uibuilder" title="CONTROLS" class="np-e-sidebar-tab--controls">
+            <div class="np-e-sidebar-search">
+                <ui-input dark class="np-e-sidebar-search-inner" placeholder="Find UI Element" ng-model="library.library.search.displayName" results="0"></ui-input>
+                <span ng-if="library.library.search.displayName.length > 0" class="np-e-sidebar-search-filter-icon prototype-assets--images--Delete_White_Normal prototype-assets--images--Delete_White_Normal-dims" ng-click="library.resetControlSearch()"></span>
+            </div>
+            <div class="np-e-library-control-palette">
+                <div class="np-e-library-header" ng-repeat="(groupName, controls) in library.library.catalog">
+                    <h5>{{groupName}}</h5>
+                    <np-component-library-item ng-repeat="component in controls | filter:library.library.search"
+                                               display-name="{{::component.displayName}}"
+                                               icon-class="{{::component.iconClass}}"
+                                               icon-src="{{::component.iconSrc}}"
+                                               type="control"
+                                               drag-data="{
+                                                    catalogControlName: '{{::component.name}}',
+                                                    catalogId: '{{::component.catalogId}}'
+                                                  }">
+                    </np-component-library-item>
+                </div>
+            </div>
+        </ui-tab-option>
+        <ui-tab-option id="tab-assets" title="ASSETS">
+            <div class="np-e-sidebar-search">
+                <ui-input dark class="np-e-sidebar-search-inner" placeholder="Find Asset" ng-model="library.library.assets.search.title" results="0"></ui-input>
+                <span ng-if="library.library.assets.search.title.length >0" class="np-e-sidebar-search-filter-icon-asset prototype-assets--images--Delete_White_Normal prototype-assets--images--Delete_White_Normal-dims" ng-click="library.resetAssetSearch()"></span>
+            </div>
+            <ui-accordion allow-multiple>
+                <ui-accordion-pane expanded="library.library.assetsOpen" ng-show="(library.library.assets | filter:library.library.assets.search).length>0">
+                    <ui-accordion-pane-header class="np-e-header-assets-images">
+                        <h5>Images</h5>
+                    </ui-accordion-pane-header>
+                    <ui-accordion-pane-content class="np-e-library-accordion-pane-content np-e-library-accordion-pane-content-components" layout="row" layout-align="start start" layout-wrap>
+                        <np-component-library-item
+                                                   ng-repeat="component in library.library.assets | filter:library.library.assets.search"
+                                                   display-name="{{::component.title | limitTo: 30}}"
+                                                   icon-class="prototype-assets--images--palette--asset"
+                                                   type="asset"
+                                                   drag-data="{
+                                                        assetSrc:'/api/projects/{{::currentProject}}/document/{{::component.assetId}}/render'
+                                                        }"
+                                                   np-preview-image-on-hover>
+                        </np-component-library-item>
+                    </ui-accordion-pane-content>
+                </ui-accordion-pane>
+            </ui-accordion>
+        </ui-tab-option>
+        <ui-tab-option id="tab-data" title="DATA">
+            <ui-accordion class="np-e-data-accordion">
+                <ui-accordion-pane ng-repeat="entity in library.allEntities">
+                    <ui-accordion-pane-header>
+                        <div class="np-e-data-modeler-item">
+                            <np-component-library-item class="np-e-library-item-header np-e-data-modeler-entity"
+                                                   display-name="{{ entity.name }}"
+                                                   type="binding"
+                                                   drag-data="{
+                                                       isBinding: true,
+                                                       entityId: '{{::entity._id}}',
+                                                       entityName: '{{::entity.name}}'
+                                                   }">
+                            </np-component-library-item>
+                            <div class="np-e-data-modeler-item-bind-indicator np-e-data-modeler-item-bind-indicator-header" ng-class="{'np-e-data-modeler-item-bind-indicator-active': entity.isUsedInABinding }"></div>
+                        </div>
+                    </ui-accordion-pane-header>
+                    <ui-accordion-pane-content class="np-e-library-accordion-pane-content droppable-data-modeler-elements" layout="row" layout-align="start start" layout-wrap>
+                        <div ng-repeat="property in entity.properties" class="np-e-data-modeler-item">
+                            <np-component-library-item
+                                    display-name="{{ property.name }}"
+                                    type="binding"
+                                    drag-data="{
+                                       isBinding: true,
+                                       entityId: '{{::entity._id}}',
+                                       entityName: '{{::entity.name}}',
+                                       propertyId: '{{::property._id}}',
+                                       propertyName: '{{::property.name}}'
+                                   }">
+                            </np-component-library-item>
+                            <div class="np-e-data-modeler-item-bind-indicator np-e-data-modeler-item-bind-indicator-item" ng-class="{'np-e-data-modeler-item-bind-indicator-active': property.isUsedInABinding }"></div>
+                        </div>
+                    </ui-accordion-pane-content>
+                </ui-accordion-pane>
+                <div class="np-e-library-button">
+                    <ui-button size="large" ng-click="uieditor.openDataModeler()" ng-disabled="library.library.disableDataModeler">
+                        DATA EDITOR
+                    </ui-button>
+                </div>
+            </ui-accordion>
+        </ui-tab-option>
+    </ui-tabs>
+</div>

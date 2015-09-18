@@ -1,0 +1,15 @@
+<div class="np-component-library-item" draggable="true">
+
+    <div ng-if="type!=='binding'">
+        <!--TODO merge these two into svg directive!-->
+        <span layout="row" layout-align="center center" class="np-component-library-item-icon {{::iconClass}}" ng-if="iconClass"></span>
+        <np-svg-icon layout="row" layout-align="center center" class="np-component-library-item-icon" src="{{::iconSrc}}" ng-if="!iconClass && iconSrc"></np-svg-icon>
+        <span layout="row" layout-align="center center"  class="np-component-library-item-icon uicatalog-default uicatalog-default-dims" ng-if="!iconClass  && !iconSrc"></span>
+    </div>
+
+    <div class="np-component-library-item-title-wrapper">
+        <span class="np-component-library-item-title">{{::displayName}}</span>
+    </div>
+
+    <div class="np-component-library-item-gripper prototype-assets--images--gripper"></div>
+</div>

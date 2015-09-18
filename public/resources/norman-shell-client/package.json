@@ -1,0 +1,45 @@
+{
+  "name": "norman-shell-client",
+  "version": "0.3.0",
+  "description": "Norman module providing the project shell",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sapbuild/Shell.git"
+  },
+  "licenses": [
+    {
+      "type": "Apache License, Version 2.0",
+      "url": "https://github.com/SAP/Build/blob/master/LICENSE.txt"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/sapbuild/Shell/issues"
+  },
+  "homepage": "https://github.com/sapbuild/Shell",
+  "_id": "norman-shell-client@0.3.0",
+  "scripts": {},
+  "_shasum": "4a7bc96e04ca1cd4187401a8ee75695384b76fd5",
+  "_from": "norman-shell-client@0.3.0",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "davidjones02",
+    "email": "david.jones02@sap.com"
+  },
+  "maintainers": [
+    {
+      "name": "devinea",
+      "email": "austin.devine@sap.com"
+    },
+    {
+      "name": "davidjones02",
+      "email": "david.jones02@sap.com"
+    }
+  ],
+  "dist": {
+    "shasum": "4a7bc96e04ca1cd4187401a8ee75695384b76fd5",
+    "tarball": "http://registry.npmjs.org/norman-shell-client/-/norman-shell-client-0.3.0.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/norman-shell-client/-/norman-shell-client-0.3.0.tgz",
+  "readme": "ERROR: No README data found!"
+}

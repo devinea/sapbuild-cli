@@ -1,0 +1,11 @@
+<div ng-class="{'np-p-page-map-tile-inner':true, 'np-p-page-map-selected':item.id === selectedItem.id}" item-id="item.id"
+     ng-style="item.position">
+
+    <ui-thumbnail ng-class="{'np-p-page-map-grey':!highlight}" size="medium" light thumbnail-src="{{screenImage}}"></ui-thumbnail>
+
+    <div class="np-p-page-map-tile-inner-bottom-box">
+        <img class = "np-p-page-map-tile-inner-home-icon" ng-class="{'np-p-page-map-grey':!highlight}" src = "resources/norman-prototype-editors-client/UIComposer/assets/images/small-home-city.svg" ng-if="isHome"/>
+        <div class = "np-p-page-map-tile-inner-transparent-icon" ng-if="!isHome"></div>
+        <input class="np-p-page-map-tile-inner-screen-name-home" ng-class="{'np-p-page-map-grey':!highlight}" ng-readonly="inputReadOnly" ng-model="screenName" ng-mousedown="onMouseDown();" ng-click="onInputClick($event);" ng-dblclick="onInputDblClick($event);" type="text" ng-blur="onInputLoseFocus();"/>
+    </div>
+</div>

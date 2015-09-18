@@ -1,0 +1,68 @@
+<div ngCloak
+    id="study-studyHomeWidget"
+    class="fadeIn"
+    ng-controller="StudyWidgetCtrl as studyHomeWidget"
+    ng-show="studyHomeWidget.participates != undefined && studyHomeWidget.participates.length > 0 && !studyHomeWidget.loading">
+
+    <div layout="row" class="study-header">
+        <div class="study-title"><h1>Studies I participate in</h1></div>
+
+        <div class="study-invitation" ng-if="studyHomeWidget.newStudiesCount > 0">
+            <div layout="row" class="study-invitation-text">
+                <div ng-bind="studyHomeWidget.newStudiesCount"></div>&nbsp;
+                <ng-pluralize count="studyHomeWidget.newStudiesCount"
+                    when="{1: 'new study!', other: 'new studies!'}"></ng-pluralize>
+            </div>
+        </div>
+    </div>
+
+    <div layout="row" class="study-subtitle">
+        <h1><small>
+            <b ng-bind="studyHomeWidget.participates.length"></b>
+            <span class="study-count-text" ng-bind="studyHomeWidget.participates.length === 1 ? ' study' : ' studies'"></span>
+        </small></h1>
+    </div>
+
+
+    <div layout="row">
+        <div more-less
+            class="study-studies"
+            ng-class="{studyShowAll: studyHomeWidget.showAllStudies}"
+            num-of-hidden="studyHomeWidget.numOfHidden">
+
+            <ui-study-tile
+                ng-repeat="participate in studyHomeWidget.participates | orderBy: ['-hasInvited', '-participatedAt']"
+
+                id="{{participate._id}}"
+                idx="{{$index}}"
+                name="{{participate.name}}"
+                comments="{{participate.comments}}"
+                date="{{participate.participatedAt}}"
+                annotations="{{participate.annotations}}"
+                thumb="{{participate.thumbnail}}"
+                status="{{participate.status}}"
+                badge="{{participate.hasInvited ? 'NEW!' : ''}}"
+                on-select="studyHomeWidget.openStudy(participate.projectId, participate._id)"
+                type="participant">
+            </ui-study-tile>
+        </div>
+    </div>
+
+    <div
+        class="study-more-less"
+        layout="row"
+        ng-show="studyHomeWidget.participates.length > 0 && studyHomeWidget.numOfHidden > 0">
+
+        <div
+            ng-class="studyHomeWidget.showAllStudies ? 'study-all-link-less' : 'study-all-link-more'"
+            ng-click="studyHomeWidget.showAllStudies = !studyHomeWidget.showAllStudies">&nbsp;</div>
+
+        <a class="study-all-link" href=""
+            ng-click="studyHomeWidget.showAllStudies = !studyHomeWidget.showAllStudies"
+            ng-bind="(studyHomeWidget.showAllStudies == true ?
+                'Hide ' + studyHomeWidget.numOfHidden :
+                'Show ' + studyHomeWidget.numOfHidden) +
+                (studyHomeWidget.numOfHidden > 1 ? ' more studies' : ' more study')"></a>
+    </div>
+
+</div>

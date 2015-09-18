@@ -1,0 +1,9 @@
+<div class="np-e-add-page-tile" layout="column" layout-align="space-between center">
+	<div>
+    	<h2>{{::title}}</h2>
+    	<h3>{{::subtitle}}</h3>
+    </div>
+    <div class="np-e-add-page-tile-icon" ng-class="iconClass ? 'prototype-assets--images--' + iconClass : 'prototype-assets--images--page'"></div>
+    <p class="np-e-add-page-tile-description">{{::description}}</p>
+    <ui-button size="large" class="np-e-add-page-tile-button" ng-click="addFn({$event: $event})">Add</ui-button>
+</div>

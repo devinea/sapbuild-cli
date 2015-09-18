@@ -1,0 +1,91 @@
+<div class="np-r-selectbox"
+     np-can-drop-binding-property-name="{{ npPropertyName }}"
+     np-can-drop-binding
+     np-can-drop-binding-smart-app="{{ npIsSmartApp }}"
+     np-can-drop-binding-main-entity="{{ npMainEntity }}"
+     droppable="true">
+    <ui-dialog modal="true" dark id="npBindingModal{{ select.instanceId }}"
+               class="np-r-binding-popup" cancel-text="Cancel"
+               close-action="selectItem(currentProperty.index)" cancel-action="" close-text="OK"
+               ng-click="$event.stopPropagation()"
+               title="Select Property">
+        <div class="np-r-binding-popup-content">
+            <div class="np-r-binding-popup-objects">
+                Objects available: <br />
+                <div ng-repeat="(entKey, entity) in items.concat(moreItems) | groupBy: 'entityName'" ng-click="setMainObject($event, entity, !multipleRelations(entity), true)" ng-class="{inactive: !isSameEntity(currentEntities, entity)}">
+                    <div class="np-r-binding-popup-objects-bind-indicator" ng-class="{'np-r-binding-popup-objects-bind-indicator-active': currentProperty.entityName === entity[0].entityName }"></div>
+                    {{ entKey }}
+                    <div ng-if="isSameEntity(currentEntities, entity) && multipleRelations(entity)">
+                        <div class="np-r-binding-popup-via">
+                            Via Relation:
+                        </div>
+                        <div class="np-r-binding-popup-relations">
+                            <div ng-repeat="(key, value) in entity | groupBy: 'navPropName'" ng-click="setMainObject($event, value, true, false)" title="{{ key ? key : 'Local' }}">
+                                <ui-radio disabled="disabled" dark ng-model="currentNavProp" value="{{ value[0].navPropName }}" id="np-binding-radio-{{ value[0].entityName + value[0].navPropName }}"></ui-radio>
+                                <label for="np-binding-radio-{{ value[0].entityName + value[0].navPropName }}" class="np-r-binding-popup-navprop-label">{{ key ? key : 'Local' }}</label>
+                            </div>
+                        </div>
+                        <div class="np-r-binding-popup-end"></div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="np-r-binding-popup-properties">
+                <div class="np-r-binding-popup-properties-title">
+                    {{ currentEntities[0].entityName + (currentNavProp ? ' (via relation ' + currentNavProp + ')' : '') }}
+                </div>
+                <div class="np-r-binding-popup-properties-table-container">
+                    <table>
+                        <tr ng-repeat="item in currentObject" ng-click="selectProperty(item)">
+                            <td class="np-r-binding-popup-properties-name">
+                                <a title="Bind with {{ item[listItemField] }}">
+                                    <ui-radio disabled="disabled" ng-model="currentPropertyRadio" value="{{ item.entityName + item.name }}" id="np-binding-radio-{{ item.entityName + item.name }}"></ui-radio>
+                                    <label for="np-binding-radio-{{ item.entityName + item.name }}">{{ item[listItemField] }}</label>
+                                </a>
+                            </td>
+                            <td class="np-r-binding-popup-properties-type">
+                                {{ item.type }}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="np-r-binding-popup-end"></div>
+        </div>
+    </ui-dialog>
+    <div href ng-attr-id="{{::select.instanceId}}" class="np-r-selectbox-toggle" ng-click="toggleList()" ng-class="{active: select.show}">
+        <div class="np-r-selectbox-bind-indicator" ng-class="{'np-r-selectbox-bind-indicator-active': npPropertyIsBound}"></div>
+        <input id="property-input-{{ select.instanceId }}" placeholder="Enter a Value" ng-show="!npPropertyIsBound" type="text" ng-blur="changePropertyValue()" ng-keydown="addCustomValue($event)" ng-model="npValue" title="{{ npValue ? npValue : 'Enter a Value' }}" />
+        <span title="Bound with {{ npValue }}" ng-click="$event.stopPropagation();toggleList()" ng-show="npPropertyIsBound">{{ npValue }}</span>
+    </div>
+    <div class="np-r-selectbox-dropdown" ng-show="select.show">
+        <ul>
+            <li class="np-r-selectbox-item-li" ng-click="unbindProp()" title="Enter Custom Value">
+                <span class="np-r-selectbox-item">
+                    Custom Value
+                </span>
+            </li>
+            <li class="np-r-selectbox-group-li" ng-if="(select.selected && select.selected.group) || currentEntity" ng-click="$event.stopPropagation()" title="{{ select.selected.group }}">
+                <span class="np-r-selectbox-group">
+                    {{ select.selected ? select.selected.group : currentEntity }}
+                </span>
+            </li>
+            <li class ="np-r-selectbox-item-li" ng-repeat="(key, value) in items">
+                <div class="np-r-selectbox-item-bind-indicator"></div>
+                <a class="np-r-selectbox-item" title="Bind with {{ value[listItemField] || value }}" ng-click="selectItem(value.index ? value.index : key)">
+                    <span class="np-r-selectbox-item-li-value"> {{ value[listItemField] || value }}</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="np-r-selectbox-item-li" ng-if="moreItems.length">
+                <a class="np-r-selectbox-item np-r-more-items" title="Show {{ displayMoreItems ? 'Less' : 'More' }} Objects..." ng-click="openPopup($event)">
+                    <span class="np-r-selectbox-item-li-value">{{ displayMoreItems ? 'Less' : 'More' }} Objects...</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="np-r-selectbox-item-li" ng-if="(items.length === 0 || items === undefined) && (moreItems.length === 0 || moreItems === undefined)">the list is empty</li>
+        </ul>
+    </div>
+</div>

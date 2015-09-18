@@ -1,0 +1,45 @@
+{
+  "name": "norman-common-client",
+  "version": "0.3.0",
+  "description": "Client side module to handle common dependencies",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sapbuild/Common.git"
+  },
+  "licenses": [
+    {
+      "type": "Apache License, Version 2.0",
+      "url": "https://github.com/SAP/Build/blob/master/LICENSE.txt"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "devinea",
+      "email": "austin.devine@sap.com"
+    },
+    {
+      "name": "davidjones02",
+      "email": "david.jones02@sap.com"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/sapbuild/Common/issues"
+  },
+  "homepage": "https://github.com/sapbuild/Common",
+  "_id": "norman-common-client@0.3.0",
+  "scripts": {},
+  "_shasum": "75aa5ccf408d2d7f886b755e850aeb39039dc073",
+  "_from": "norman-common-client@0.3.0",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "davidjones02",
+    "email": "david.jones02@sap.com"
+  },
+  "dist": {
+    "shasum": "75aa5ccf408d2d7f886b755e850aeb39039dc073",
+    "tarball": "http://registry.npmjs.org/norman-common-client/-/norman-common-client-0.3.0.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/norman-common-client/-/norman-common-client-0.3.0.tgz",
+  "readme": "ERROR: No README data found!"
+}

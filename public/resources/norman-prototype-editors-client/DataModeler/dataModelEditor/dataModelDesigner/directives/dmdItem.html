@@ -1,0 +1,31 @@
+<div ng-class="{'dmd-entity': true , 'dmd-selectedEntity': item._id == selectedItem._id }" id="{{item._id}}"
+     ng-style="{'left':item.position.left+'px' , 'top':item.position.top+'px'} ">
+
+    <div>
+        <div ng-hide="bedit"
+             class="dmd-linkIcon"
+             title="drag a connection"
+             data-toggle="tooltip">
+
+        </div>
+
+        <div ng-hide="bedit"
+             class="dmd-entityName"
+             ng-dblclick="onEdit()">{{item.name}}
+        </div>
+
+        <ui-input
+            class="editable-input"
+            ng-show="bedit"
+            type="text"
+            ng-keydown="key($event)"
+            ng-blur="validateName()"
+            ng-model="item.name"
+            ></ui-input>
+
+        <div class="dmd-removeIcon dmsvg-remove">
+            <div title="remove" data-toggle="tooltip" ng-click="delete($event)"></div>
+        </div>
+
+    </div>
+</div>
