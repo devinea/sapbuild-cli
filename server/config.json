@@ -8,19 +8,23 @@
     "logging": {
         "logDirectory": "logs",
         "output": {
+            "stdout": {
+                "type": "console"
+            },
             "logfile": {
                 "type": "file",
-                "path": "norman_{now:yyyyMMdd}_{pid}.log"
+                "path": "norman_{now:yyyyMMdd}.log"
             }
         },
         "loggers": {
             "*": {
+                "stdout": "debug",
                 "logfile": "info"
             }
         }
     },
     "db": {
-        "hosts": "localhost",
+        "hosts": "192.168.99.100",
         "database": "norman",
         "options": {
             "db": {
@@ -40,15 +44,15 @@
     "http": {
         "port": 9000,
         "proxy": {
-            "host": "proxy.wdf.sap.corp",
+            "host": "proxy",
             "port": 8080
         },
         "secureFlag" : false
     },
     "mail": {
-        "sender":"do.not.reply@sap.com",
+        "sender":"do.not.reply@example.com",
         "smtp": {
-            "host": "mail.sap.corp",
+            "host": "mail.example.com",
             "port": 25,
             "debug": true,
             "tls": {
