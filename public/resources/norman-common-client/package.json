@@ -14,32 +14,18 @@
   ],
   "maintainers": [
     {
-      "name": "devinea",
-      "email": "austin.devine@sap.com"
-    },
-    {
-      "name": "davidjones02",
-      "email": "david.jones02@sap.com"
+      "name": "BUILD Team",
+      "email": "contact.build@sap.com"
     }
   ],
+  "readme": "norman-common-client\r\n=============\r\n###Norman Client-Side Dependences\r\nThis module provides a single point to include Common dependences.\r\n",
+  "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/sapbuild/Common/issues"
   },
-  "homepage": "https://github.com/sapbuild/Common",
+  "homepage": "https://github.com/sapbuild/Common#readme",
   "_id": "norman-common-client@0.3.0",
-  "scripts": {},
   "_shasum": "75aa5ccf408d2d7f886b755e850aeb39039dc073",
-  "_from": "norman-common-client@0.3.0",
-  "_npmVersion": "1.4.28",
-  "_npmUser": {
-    "name": "davidjones02",
-    "email": "david.jones02@sap.com"
-  },
-  "dist": {
-    "shasum": "75aa5ccf408d2d7f886b755e850aeb39039dc073",
-    "tarball": "http://registry.npmjs.org/norman-common-client/-/norman-common-client-0.3.0.tgz"
-  },
-  "directories": {},
   "_resolved": "https://registry.npmjs.org/norman-common-client/-/norman-common-client-0.3.0.tgz",
-  "readme": "ERROR: No README data found!"
+  "_from": "https://registry.npmjs.org/norman-common-client/-/norman-common-client-0.3.0.tgz"
 }

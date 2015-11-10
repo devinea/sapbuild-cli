@@ -12,34 +12,14 @@
     "type": "git",
     "url": "git+https://github.com/sapbuild/Auth.git"
   },
+  "readme": "norman-auth-client\r\n=====\r\n###Norman authentication module.\r\n\r\nTo install run:\r\n```sh\r\n\tnpm install norman-auth-client norman-auth-server\r\n```\r\n\r\nTo include in your angular app, add the dependency in your main module:\r\n```js\r\n\tangular.module('myApp',[\r\n\t\trequire('norman-auth-client').name\r\n\t])\r\n```\r\n",
+  "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/sapbuild/Auth/issues"
   },
-  "homepage": "https://github.com/sapbuild/Auth",
+  "homepage": "https://github.com/sapbuild/Auth#readme",
   "_id": "norman-auth-client@0.3.0",
-  "scripts": {},
   "_shasum": "00ba8b89f0ba1a84b23f7c5e970e13c8a4fe04ec",
-  "_from": "norman-auth-client@0.3.0",
-  "_npmVersion": "1.4.28",
-  "_npmUser": {
-    "name": "davidjones02",
-    "email": "david.jones02@sap.com"
-  },
-  "maintainers": [
-    {
-      "name": "devinea",
-      "email": "austin.devine@sap.com"
-    },
-    {
-      "name": "davidjones02",
-      "email": "david.jones02@sap.com"
-    }
-  ],
-  "dist": {
-    "shasum": "00ba8b89f0ba1a84b23f7c5e970e13c8a4fe04ec",
-    "tarball": "http://registry.npmjs.org/norman-auth-client/-/norman-auth-client-0.3.0.tgz"
-  },
-  "directories": {},
   "_resolved": "https://registry.npmjs.org/norman-auth-client/-/norman-auth-client-0.3.0.tgz",
-  "readme": "ERROR: No README data found!"
+  "_from": "https://registry.npmjs.org/norman-auth-client/-/norman-auth-client-0.3.0.tgz"
 }

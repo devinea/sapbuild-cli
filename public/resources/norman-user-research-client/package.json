@@ -18,30 +18,10 @@
     "crossroads": "0.12.1",
     "hasher": "1.2.0"
   },
+  "readme": "[norman-user-research-client](https://github.wdf.sap.corp/Norman/UserResearch)\r\n============\r\nThis module allows users to obtain feedbacks on their app.\r\n\r\n### Include as a module\r\n\r\n1. Configure [Norman NPM registry](https://jam4.sapjam.com/wiki/show/kvLVqwLEg5DQorc6zsGIUh) - for installing norman modules with `npm`\r\n\r\n2. Install the npm module:\r\n    ```sh\r\n    npm install norman-user-research-client\r\n    ```\r\n\r\n3. Include it in the client app: edit `client/requires.js`:\r\n    ```js\r\n    require('norman-user-research-client');\r\n    ```\r\n",
+  "readmeFilename": "README.md",
   "_id": "norman-user-research-client@0.3.0",
-  "scripts": {},
   "_shasum": "0cc843f3b36535eecce83ea616cd9ffc9d1a5af2",
-  "_from": "norman-user-research-client@0.3.0",
-  "_npmVersion": "1.4.28",
-  "_npmUser": {
-    "name": "davidjones02",
-    "email": "david.jones02@sap.com"
-  },
-  "maintainers": [
-    {
-      "name": "devinea",
-      "email": "austin.devine@sap.com"
-    },
-    {
-      "name": "davidjones02",
-      "email": "david.jones02@sap.com"
-    }
-  ],
-  "dist": {
-    "shasum": "0cc843f3b36535eecce83ea616cd9ffc9d1a5af2",
-    "tarball": "http://registry.npmjs.org/norman-user-research-client/-/norman-user-research-client-0.3.0.tgz"
-  },
-  "directories": {},
   "_resolved": "https://registry.npmjs.org/norman-user-research-client/-/norman-user-research-client-0.3.0.tgz",
-  "readme": "ERROR: No README data found!"
+  "_from": "https://registry.npmjs.org/norman-user-research-client/-/norman-user-research-client-0.3.0.tgz"
 }

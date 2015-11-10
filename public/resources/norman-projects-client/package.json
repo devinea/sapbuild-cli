@@ -12,34 +12,15 @@
       "url": "https://github.com/SAP/Build/blob/master/LICENSE.txt"
     }
   ],
+  "readmeFilename": "README.md",
   "scripts": {},
+  "readme": "Project Client Module\r\n=====\r\n###Norman Projects module.\r\n\r\nTo install run:\r\n```\r\n\tnpm install norman-projects-client norman-projects-server\r\n```\r\n\r\nTo include in your angular app, add the dependency into requires.js:\r\n```js\r\n\trequire('norman-projects-client');\r\n```\r\n",
   "bugs": {
     "url": "https://github.com/sapbuild/Projects/issues"
   },
-  "homepage": "https://github.com/sapbuild/Projects",
+  "homepage": "https://github.com/sapbuild/Projects#readme",
   "_id": "norman-projects-client@0.3.0",
   "_shasum": "2f6d2ead87a2ee14716272da67257747c463f1da",
-  "_from": "norman-projects-client@0.3.0",
-  "_npmVersion": "1.4.28",
-  "_npmUser": {
-    "name": "davidjones02",
-    "email": "david.jones02@sap.com"
-  },
-  "maintainers": [
-    {
-      "name": "devinea",
-      "email": "austin.devine@sap.com"
-    },
-    {
-      "name": "davidjones02",
-      "email": "david.jones02@sap.com"
-    }
-  ],
-  "dist": {
-    "shasum": "2f6d2ead87a2ee14716272da67257747c463f1da",
-    "tarball": "http://registry.npmjs.org/norman-projects-client/-/norman-projects-client-0.3.0.tgz"
-  },
-  "directories": {},
   "_resolved": "https://registry.npmjs.org/norman-projects-client/-/norman-projects-client-0.3.0.tgz",
-  "readme": "ERROR: No README data found!"
+  "_from": "https://registry.npmjs.org/norman-projects-client/-/norman-projects-client-0.3.0.tgz"
 }

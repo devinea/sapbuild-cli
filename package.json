@@ -1,7 +1,7 @@
 {
   "name": "sap-build-cli",
-  "version": "0.3.0",
-  "description": "SAP BUILD",
+  "version": "0.3.3",
+  "description": "SAP BUILD Installer",
   "repository": {
     "type:": "git",
     "url": "https://github.com/SAP/BUILD"
@@ -15,7 +15,7 @@
     "maintainers": [
         {
             "name": "BUILD Team",
-            "email": "contact.build@sap.com"
+            "email": "contribute.build@sap.com"
         }
     ],
   "engines": {
@@ -43,13 +43,13 @@
   },
   "devDependencies": {
   },
-    "readmeFilename": "../README.md",
+    "readmeFilename": "README.md",
     "preferGlobal": true,
     "bin": {
         "sapbuild": "server/appWithInit.js"
     },
   "scripts": {
     "test": "grunt test",
-    "start": "node server/appWithInit.js"
+    "start": "node server/initSchema.js && node server/appWithInit.js"
   }
 }
